@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class FancController extends Controller
 {
     /**
-     * Display a listing of the resource.dasdasdadasdeqweqwe
+     * Display a listing of the resource.rere
      */
     public function index()
     {
