@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'con';
+    src: url('fonts/Constantia.ttf') format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: con sans-serif}
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.main-background {
+    background: #FFFFFF;
+}
+.additional-background {
+    background: #BFD6F6;
+}
+.accent {
+    color: #405C73;
+}
+.bigSize {
+    font-size: 1.3em;
+}
+.flex {
+    display: flex;
+}
+.border {
+    border: 1px solid #405C73;
+    padding: 20px;
+    margin: 20px;
+}
+main a {
+    text-decoration: none;
+    color: #405C73;
+}
+.btn {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 20px;
+    background-color: #BFD6F6;
+    color: #405C73;
+    border-radius: 10px;
+    border: 1px solid #405C73;
+}
+.btn2 {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px 20px;
+    background-color: #ffffff;
+    color: #405C73;
+    border-radius: 10px;
+    border: 1px solid #405C73;
+}
+.div85 {
+    width: 85%;
+}
+.div15 {
+    width: 15%;
+}
+.div70 {
+    width: 70%;
+}
+.warning {
+    color: red;
+    font-size: 12px;
+}
+form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+.just {
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    background: #BFD6F6;
+    color: #405C73;
+}
+a{
+    text-decoration: none;
+    background-color: #FFFFFF;
+    color: #405C73;
+    font-size: 1.3em;
+}
