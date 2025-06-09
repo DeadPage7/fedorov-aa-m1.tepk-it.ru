@@ -2,27 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MaterialType;
+use App\Models\ProductType;
 use Illuminate\Http\Request;
 
 class FancController extends Controller
 {
-    public function calculate(ProductType $productType, MaterialType $materialType, int $availableMaterial, float $param1, float $param2): int {
+    public function calculate(ProductType $productType, MaterialType $materialType, int $availableMaterial, float $p1, float $p2): int {
         try {
-            if ($availableMaterial <= 0 || $param1 <= 0 || $param2 <= 0) {
+            if ($availableMaterial <= 0 || $p1 <= 0 || $p2 <= 0) {
                 return -1;
             }
             $productType = ProductType::findOrFail($productTypeId);
             $materialType = MaterialType::findOrFail($materialTypeId);
 
-            // Расчёт необходимого сырья на одну единицу продукции
-            $rawPerProduct = $param1 * $param2 * $productType->coefficient;
+            //Расчет сырья необходимый на один продукт
+            $rawPerProduct = $p1 * $p2 * $productType->coefficient;
 
             // Учет потерь материала
-            $lossPercent = $materialType->loss;
-            $rawWithLoss = $rawPerProduct * (1 + $lossPercent / 100);
+            $pPercent = $materialType->percent;
+            $rawWithPercent = $rawPerProduct * (1 + $pPercent / 100);
 
-            // Вычисляем максимальное количество продукции
-            $productionCount = floor($availableMaterial / $rawWithLoss);
+            // Вычисление max кол-во продукции
+            $productionCount = floor($availableMaterial / $rawWithPercent);
 
             return $productionCount >= 0 ? (int)$productionCount : 0;
 

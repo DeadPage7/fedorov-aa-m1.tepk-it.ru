@@ -10,7 +10,7 @@ class ProductType extends Model
     public $timestamps = false;
     protected $fillable = ['name', 'coefficient'];
 
-    // Связь с продуктами
+    // Связь
     public function products()
     {
         return $this->hasMany(Product::class);

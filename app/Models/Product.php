@@ -8,7 +8,7 @@ class Product extends Model
 {
     //
     public $timestamps = false;
-    protected $fillable = ['product_type_id', 'name', 'article', 'minPrice'];
+    protected $fillable = ['product_type_id', 'name', 'article', 'price'];
 
     // Связи
     public function productType()

@@ -12,6 +12,7 @@ class Material extends Model
 
     protected $fillable = ['material_type_id', 'name', 'price', 'warehouse', 'minimum', 'packaging', 'unit_id'];
 
+    // Связи
     public function materialType() : BelongsTo
     {
         return $this->belongsTo(MaterialType::class);

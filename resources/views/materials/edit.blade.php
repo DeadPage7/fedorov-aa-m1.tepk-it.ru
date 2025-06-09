@@ -12,7 +12,7 @@
                 alert("Ошибка валидации!");
             </script>
         @endif
-        <div class=" border additional-background bigSize">
+        <div class=" border c1-background bigSize">
 
 
         <div>

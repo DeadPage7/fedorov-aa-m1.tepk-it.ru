@@ -13,10 +13,10 @@
 <header>
     <nav>
         <div>
-            <img src="{{asset('assets/images/ph.png')}}" alt="Логотип" width="75" >
+            <img class="im" src="{{asset('assets/images/ph.png')}}" alt="Логотип" width="75" >
         </div>
         <ul>
-            <li><a href="{{ route('materials.index') }}">Материалы</a> </li>
+            <li><a class="btn" href="{{ route('materials.index') }}">Материалы</a> </li>
         </ul>
     </nav>
 </header>

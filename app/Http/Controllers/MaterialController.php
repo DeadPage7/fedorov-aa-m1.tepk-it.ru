@@ -50,7 +50,7 @@ class MaterialController extends Controller
     }
     public function show(Material $material)
     {
-        // Загружаем продукты с информацией о количестве материала
+
         $products = $material->materialProducts()
             ->with('product')
             ->get();

@@ -6,7 +6,7 @@
     <a class="btn" href="{{ route('materials.create') }}">Создать материал</a>
 
     @foreach($materials as $material)
-        <div class="flex border additional-background bigSize">
+        <div class="flex border c1-background bigSize">
             <div class="div85" id="edit">
                 <div class="bigSize">{{$material->materialType->name}} | {{$material->name}}</div>
                 <div>{{$material->minimum}}</div>

@@ -12,11 +12,11 @@
                 alert("Ошибка валидации!");
             </script>
         @endif
-        <div class=" border additional-background bigSize">
+        <div class=" border c1-background bigSize">
             <div>
-            <div class="just">
+            <div class="just ">
                 <label>Тип материала: </label>
-                <select name="material_type_id" required>
+                <select class="sel" name="material_type_id" required>
                     @foreach($types as $type)
                         <option value="{{ $type->id }}"> {{ $type->name }}</option>
                     @endforeach
@@ -74,7 +74,7 @@
         <div>
             <div class="just">
                 <label>Единица измерения: </label>
-                <select name="unit_id" required>
+                <select class="sel" name="unit_id" required>
                     @foreach($units as $unit)
                         <option value="{{ $unit->id }}"> {{ $unit->name }}</option>
                     @endforeach

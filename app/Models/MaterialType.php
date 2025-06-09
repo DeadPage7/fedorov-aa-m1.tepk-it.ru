@@ -8,9 +8,9 @@ class MaterialType extends Model
 {
     //
     public $timestamps = false;
-    protected $fillable = ['name', 'loss'];
+    protected $fillable = ['name', 'percent'];
 
-    // Связь с материалами
+    // Связь
     public function materials()
     {
         return $this->hasMany(Material::class);
